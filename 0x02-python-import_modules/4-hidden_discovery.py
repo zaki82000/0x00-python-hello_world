@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
+import hidden_4
 
-    import hidden_4
 
-    names = dir(hidden_4)
-    for name in names:
+def print_names(module):
+    for name in dir(module):
         if name[:2] != "__":
-            print(name)
+            print("{:s}".format(name))
+
+
+if __name__ == "__main__":
+    print_names(hidden_4)
