@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-a = 89
-b = 10
-a, b = b, a
-print("a={:d} - b={:d}".format(a, b))
+def print_reversed_list_integer(my_list=[]):
+    if my_list:
+        my_list.reverse()
+        for x in range(len(my_list)):
+            print("{:d}".format(my_list[x]))
