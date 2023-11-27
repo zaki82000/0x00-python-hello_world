@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This is an empty class called Square. """
+""" This is an class called Square. """
 
 
 class Square:
