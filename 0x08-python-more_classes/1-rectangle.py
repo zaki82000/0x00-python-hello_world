@@ -8,25 +8,30 @@ class Rectangle:
         self.__height = height
         self.__width = width
         """Private instance attribute: height and width """
+    @property
     def width(self):
         """Private instance attribute: width: """
-        return f"{self.__width}"
-
+        return self.__width
+    @width.setter
     def width(self, value):
-        if value is int:
-            return f"{self.__width}"
-        elif value is not int:
+        if isinstance(value, int):
+            if value >= 0: 
+                self.__width = value
+            else:
+                raise ValueError("width must be >= 0")
+        else:
             raise TypeError("width must be an integer")
-        elif value < 0:
-            raise ValueError("width must be >= 0")
-
+    @property
     def height(self):
         """Private instance attribute: height: """
 
-        return f"{self.__height}"
-        if value is int:
-            return f"{self.__height}"
-        elif value is not int:
+        return self.__height
+    @height.setter
+    def height(self, value):
+        if isinstance(value, int):
+            if value >= 0: 
+                self.__height = value
+            else:
+                raise ValueError("height must be >= 0")
+        else:
             raise TypeError("height must be an integer")
-        elif value < 0:
-            raise ValueError("height must be >= 0")
