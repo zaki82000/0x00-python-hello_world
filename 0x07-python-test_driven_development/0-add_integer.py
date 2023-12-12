@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
     This is add_integer function.
-        Adds two number together.
-            Return the sum of this numbers.
+    Adds two number together.
+    Return the sum of this numbers.
 """
 
 
