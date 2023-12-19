@@ -16,11 +16,11 @@ def text_indentation(text):
     rasies:
         TypeError: text must be a string
     """
-    characters_list = ['.', ':', '?']
+    characters_list = [".", ":", "?"]
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
     for char in characters_list:
         text = text.replace(char, char + '\n\n')
 
-    print(text)
+    print(text.strip())
