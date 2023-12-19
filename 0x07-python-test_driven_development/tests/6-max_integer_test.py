@@ -10,6 +10,8 @@ class TestMaxInteger(unittest.TestCase):
     def test_max_integer(self):
         # Use assertTrue to check to the largest number
         self.assertTrue(max_integer([1, 2, 3, 4]), 4)
+    
+    def test_empty_list(self):
         # Use assertIsNone to check if the list is empty
         self.assertIsNone(max_integer([]), None)
         # Use assertRaises to check raises (if element is not integer)
