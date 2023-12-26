@@ -29,12 +29,12 @@ class Rectangle:
         """Private instance attribute: width: """
         return self.__height
 
-    @height.setter
+    @width.setter
     def height(self, value):
         if not isinstance(value, int):
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
         elif value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("height must be >= 0")
         else:
             self.__height = value
 
@@ -44,7 +44,15 @@ class Rectangle:
 
     def perimeter(self):
         """perimeter of rectangel = 2 * wigth + height"""
+        return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        result = ''
         if self.__height or self.__width != 0:
-            return 2 * (self.__width + self.__height)
+            for i in range(self.__height):
+                for j in range(self.__width):
+                    result += '#'
+                result += '\n'
+            return result[:-1]
         else:
-            return 0
+            return result
