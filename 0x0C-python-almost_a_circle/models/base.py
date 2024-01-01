@@ -1,18 +1,27 @@
 #!/usr/bin/python3
-"""not allowed to import any module"""
+"""This module defines a Base class without importing any module."""
 
 
 class Base:
+    """Base class for managing objects."""
+
     __nb_objects = 0  # private class attribute
 
     def __init__(self, id=None):
-        """class constructor"""
+        """Initialize a new instance of the Base class.
+
+        Args:
+            id (int, optional): The unique identifier. If not provided, a default
+            identifier is generated using the class attribute __nb_objects.
+
+        Returns:
+            None
+        """
         if id is None:
             self.id = Base.__nb_objects + 1
             Base.__nb_objects += 1
         else:
-            """
-            otherwise, increment __nb_objects and
-            assign the new value to the public instance attribute id
+            """Otherwise, increment __nb_objects and assign the new value to the
+            public instance attribute id.
             """
             self.id = id
