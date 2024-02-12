@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
 function countArgs () {
-  return arguments.length - 1;
+  return process.argv.length -2;
 }
 
-const numArg = countArgs;
+const numArg = countArgs();
 
 if (numArg === 0) {
   console.log('No argument');
