@@ -10,14 +10,14 @@ class Square extends square {
 
   charPrint (c) {
     if (c === undefined) {
-        this.print();
+      this.print();
     } else {
       for (let n = 0; n < this.size; n++) {
-        let charc = '';
+        let char = '';
         for (let x = 0; x < this.size; x++) {
-          charc += c;
+          char += c;
         }
-        console.log(charc);
+        console.log(char);
       }
     }
   }
