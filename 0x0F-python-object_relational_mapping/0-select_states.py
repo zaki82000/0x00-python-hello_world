@@ -15,7 +15,7 @@ if __name__ == "__main__":
         user=argv[1],
         passwd=argv[2],
         database=argv[3]
-        )
+    )
 
     db_cursor = db_connect.cursor()
 
@@ -26,5 +26,5 @@ if __name__ == "__main__":
     for row in rows :
         print (row)
 
-        db_cursor.close()
-        db_connect.close()
+    db_cursor.close()
+    db_connect.close()
