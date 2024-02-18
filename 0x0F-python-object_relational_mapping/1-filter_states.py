@@ -22,7 +22,9 @@ if __name__ == "__main__":
 
     db_cursor.execute("SELECT * FROM states WHERE name LIKE 'N%';")
 
-    for row in db_cursor:
+    rows = db_cursor.fetchall()
+
+    for row in rows:
         print(row)
 
     db_cursor.close
