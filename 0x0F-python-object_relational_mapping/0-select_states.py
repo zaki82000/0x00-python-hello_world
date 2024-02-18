@@ -23,8 +23,8 @@ if __name__ == "__main__":
 
     rows = db_cursor.fetchall()
 
-    for row in rows :
-        print (row)
+    for row in rows:
+        print(row)
 
     db_cursor.close()
     db_connect.close()
