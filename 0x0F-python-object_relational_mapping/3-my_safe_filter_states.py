@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     db_cursor.execute(
         "SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC",
-        (argv[4],))
+        (argv[4], ))
 
     rows = db_cursor.fetchall()
 
