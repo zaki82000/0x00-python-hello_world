@@ -20,12 +20,14 @@ if __name__ == "__main__":
 
     db_cursor = db_connect.cursor()
 
-    db_cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    db_cursor.execute(
+        "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
+    )
 
     rows = db_cursor.fetchall()
 
     for row in rows:
         print(row)
 
-    db_cursor.close
-    db_connect.close
+    db_cursor.close()
+    db_connect.close()
