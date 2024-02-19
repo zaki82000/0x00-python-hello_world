@@ -25,9 +25,10 @@ if __name__ == "__main__":
         SELECT cities.name FROM cities
         JOIN states
         ON cities.state_id = states.id
-        WHERE states.name like '{}'
-        """
-        .format(argv[4])
+        WHERE states.name = %s
+        ORDER BY cities.id
+        """,
+        (argv[4])
         )
 
     rows = db_cursor.fetchall()
