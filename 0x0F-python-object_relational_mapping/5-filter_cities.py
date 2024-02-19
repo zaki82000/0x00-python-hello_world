@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 """
-script that lists all cities from the database hbtn_0e_4_usa.
-"""
+script that takes in the name of a state as an argument and
+lists all cities of that state,
+using the database hbtn_0e_4_usa"""
 
 from sys import argv
 import MySQLdb
@@ -21,10 +22,12 @@ if __name__ == "__main__":
 
     db_cursor.execute(
         """
-        SELECT cities.id, cities.name, states.name
-        FROM cities
-        join states ON cities.state_id=states.id
+        SELECT cities.name FROM cities
+        JOIN states
+        ON cities.state_id = states.id
+        WHERE states.name like '{}'
         """
+        .format(argv[4])
         )
 
     rows = db_cursor.fetchall()
