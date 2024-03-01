@@ -5,5 +5,7 @@ from urllib.request import urlopen
 
 with urlopen('https://intranet.alxswe.com/status') as response:
     html = response.read()
-
-html
+print("Body response:")
+print("    - type: {}".format(type(html)))
+print("    - content: {}".format(html))
+print("    - utf8 content: {}".format(html.decode('utf-8')))
