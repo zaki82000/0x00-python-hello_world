@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 # Python script that fetches URL.
-from urllib.request import urlopen
+import urllib.request
 
 
-with urlopen('https://intranet.alxswe.com/status') as response:
+with urllib.request.urlopen('https://intranet.alxswe.com/status') as response:
     html = response.read()
 print("Body response:")
 print("    - type: {}".format(type(html)))
