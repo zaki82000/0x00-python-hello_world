@@ -1,1 +1,1 @@
-$("header").css("#FF0000")
+$("header").css("color", "#FF0000")
